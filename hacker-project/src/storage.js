@@ -33,4 +33,6 @@ const veggieObjects = veggieList.map((name, index) => ({
 
 console.log(veggieObjects);
 
-export { veggieObjects, veggieList };
+const edibleParts = ["any", "tubers/bulbs", "leaves/stems", "fruit/pods"];
+
+export { veggieObjects, veggieList, edibleParts };
