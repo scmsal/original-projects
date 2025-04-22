@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import VeggiesList from "./components/VeggiesList";
 import { Row } from "react-bootstrap";
 import QueryForm from "./components/QueryForm";
+import DisplayGroup from "./components/DisplayGroup";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Row>
           <VeggiesList />
           <QueryForm />
+          <DisplayGroup />
         </Row>
       </main>
       <Footer />
