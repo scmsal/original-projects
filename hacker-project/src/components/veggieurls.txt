@@ -1,0 +1,69 @@
+Carrot: /api/v1/plants/daucus-carota
+Sage: /api/v1/species/salvia-x-bernardina
+Pea: /api/v1/species/pisum-sativum --no info for days to harvest
+Potato: /api/v1/species/solanum-tuberosum
+
+
+Perenual
+
+Tomato (Lycopersicon esculentum) https://perenual.com/plant-species-database-search-finder/species/5021 
+
+dill
+Anethum graveolens
+https://perenual.com/plant-species-database-search-finder/species/834
+
+potato
+Solanum tuberosum
+https://perenual.com/plant-species-database-search-finder/species/7409
+
+common sage
+Salvia officinalis 'Aurea'
+https://perenual.com/plant-species-database-search-finder/species/7095
+
+common sage
+Salvia officinalis 'Sage of Bath'
+https://perenual.com/plant-species-database-search-finder/species/7100
+
+
+sweet basil
+Ocimum basilicum
+https://perenual.com/plant-species-database-search-finder/species/5497
+
+
+summer squash
+Cucurbita pepo
+Also Known As - zucchini
+https://perenual.com/plant-species-database-search-finder/species/2255
+
+broad bean
+Vicia faba
+Also Known As - fava bean
+https://perenual.com/plant-species-database-search-finder/species/8788
+
+sweet bell pepper
+Capsicum annuum 'Park's Early Thickset'
+https://perenual.com/plant-species-database-search-finder/species/1602
+
+lettuce
+Lactuca sativa 'Merlot'
+https://perenual.com/plant-species-database-search-finder/species/4627
+
+lettuce
+Lactuca sativa
+https://perenual.com/plant-species-database-search-finder/species/4626
+
+onion
+Allium altaicum
+https://perenual.com/plant-species-database-search-finder/species/663
+
+kale
+Brassica oleracea (Acephala Group) 'Redbor'
+https://perenual.com/plant-species-database-search-finder/species/1320
+
+carrot
+Daucus carota var. sativus
+https://perenual.com/plant-species-database-search-finder/species/2320
+
+Swiss chard
+Beta vulgaris (Leaf Beet Group)
+https://perenual.com/plant-species-database-search-finder/species/1275

@@ -1,25 +1,28 @@
 import { Container, ListGroup, ListGroupItem } from "react-bootstrap";
-import { veggieObjects } from "../storage.js";
 import "../App.css";
+import { useSelector } from "react-redux";
 import { useState } from "react";
+// import { plantNamesList } from "../contants";
 
 const VeggiesList = () => {
   const [selectedVeggie, setSelectedVeggie] = useState("");
 
+  const plantNames = useSelector((state) => state.plants.plantNames);
+
+  // const plantNames = plantNamesList;
+  console.log(plantNames);
   return (
-    <Container className="mx-3 w-25">
+    <Container className="mx-3">
       <ListGroup>
-        {veggieObjects.map((veggie) => (
+        {plantNames.map((plant, index) => (
           <ListGroupItem
-            key={veggie.id}
+            key={`app-${index + 1}`}
             action
             className="custom-hover"
-            variant={
-              selectedVeggie === veggie.name ? "success" : "outline-success"
-            }
-            onClick={() => setSelectedVeggie(veggie.name)}
+            variant={selectedVeggie === plant ? "success" : "outline-success"}
+            onClick={() => setSelectedVeggie(plant)}
           >
-            {veggie.name}
+            {plant}
           </ListGroupItem>
         ))}
       </ListGroup>

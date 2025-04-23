@@ -6,13 +6,13 @@ import {
   ButtonGroup,
 } from "react-bootstrap";
 import { useState } from "react";
-import { edibleParts } from "../storage";
+import { edibleParts } from "../contants";
 
 const QueryForm = () => {
   const [selectedPart, setSelectedPart] = useState("");
 
   return (
-    <Container className="mx-3 w-25">
+    <Container className="mx-3 mb-3">
       <label className="form-label d-block mb-2" id="ediblePart">
         What part do I want to eat?
       </label>

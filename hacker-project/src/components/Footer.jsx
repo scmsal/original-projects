@@ -9,12 +9,12 @@ const Footer = () => {
           <Col className="text-center">
             Data: {"  "}
             <a
-              href="https://example.com"
+              href="https://perenual.com"
               target="_blank"
               rel="noopener noreferrer"
               // className="ps-5"
             >
-              Trefle.io
+              Perenual.com
             </a>
           </Col>
           <Col className="text-end">
