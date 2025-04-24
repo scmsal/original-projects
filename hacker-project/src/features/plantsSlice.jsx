@@ -1,7 +1,7 @@
 // features/plants/plantSlice.js
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import { API_KEY, plantNamesList } from "../contants";
+import { API_KEY, plantNamesList } from "../constants";
 
 //thunk, which is async action
 export const fetchPlants = createAsyncThunk(
@@ -19,7 +19,7 @@ export const fetchPlants = createAsyncThunk(
         if (!plant) return null;
 
         return {
-          [plantName]: {
+          [plant.id]: {
             name: plant.common_name || "Unknown",
             id: index + 1,
             API_id: plant.id,
@@ -41,12 +41,26 @@ export const fetchPlants = createAsyncThunk(
   }
 );
 
+//second thunk for specific plant details
+export const fetchPlantDetailsById = createAsyncThunk(
+  "plants/fetchPlantDetailsById",
+  async (API_id, thunkAPI) => {
+    try {
+      const res = await axios.get(
+        "https://perenual.com/api/species/details/${API_id}?key=${API_KEY}"
+      );
+      return;
+    } catch (error) {}
+  }
+);
+
 //create the slice
 const plantsSlice = createSlice({
   name: "plants",
   initialState: {
     plantNames: plantNamesList, //user-defined list
     plantData: [],
+    selectedPlant: "",
     loading: false,
     error: null,
   },
@@ -70,6 +84,9 @@ const plantsSlice = createSlice({
         (name) => name !== action.payload
       );
     },
+    setSelectedPlant: (state, action) => {
+      state.selectedPlant = action.payload;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -90,8 +107,13 @@ const plantsSlice = createSlice({
       });
   },
 });
-// Export the action for use in components
-export const { setPlantNames } = plantsSlice.actions;
+// Export the actions for use in components
+export const {
+  setPlantNames,
+  addPlantName,
+  removePlantName,
+  setSelectedPlant,
+} = plantsSlice.actions;
 
 // Export the reducer to use in configureStore()
 export default plantsSlice.reducer;
