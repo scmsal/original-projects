@@ -6,7 +6,7 @@ import {
   ButtonGroup,
 } from "react-bootstrap";
 import { useState } from "react";
-import { edibleParts } from "../contants";
+import { edibleParts } from "../constants";
 
 const QueryForm = () => {
   const [selectedPart, setSelectedPart] = useState("");
