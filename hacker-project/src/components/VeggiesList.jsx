@@ -2,11 +2,9 @@ import { Container, ListGroup, ListGroupItem } from "react-bootstrap";
 import "../App.css";
 import { useSelector } from "react-redux";
 import { useState } from "react";
-// import { plantNamesList } from "../contants";
+// import { plantNamesList } from "../constants";
 
 const VeggiesList = () => {
-  const [selectedVeggie, setSelectedVeggie] = useState("");
-
   const plantNames = useSelector((state) => state.plants.plantNames);
 
   // const plantNames = plantNamesList;
@@ -19,7 +17,7 @@ const VeggiesList = () => {
             key={`app-${index + 1}`}
             action
             className="custom-hover"
-            variant={selectedVeggie === plant ? "success" : "outline-success"}
+            variant={selectedPlant === plant ? "success" : "outline-success"}
             onClick={() => setSelectedVeggie(plant)}
           >
             {plant}
